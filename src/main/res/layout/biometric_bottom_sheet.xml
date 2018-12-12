@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="15dp">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        tools:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+        android:id="@+id/title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/img_logo"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/img_logo"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/bio_dialog_title"
+            android:textSize="18sp"
+            tools:text="Fingerprint" />
+
+        <TextView
+            android:id="@+id/item_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/bio_dialog_subtitle"
+            android:textSize="13sp"
+            tools:text="Verify is you" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_view"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/bio_dialog_description"
+        tools:text="Login to bluecross super care" />
+
+    <ImageView
+        android:id="@+id/img_fingerprint"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/item_description"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_fingerprint"
+        android:padding="14dp"
+        android:tint="@android:color/white"
+        app:srcCompat="@drawable/ic_fingerprint" />
+
+
+    <TextView
+        android:id="@+id/item_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_fingerprint"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:textColor="@color/bio_dialog_status"
+        tools:text="Failed" />
+
+
+    <Button
+        android:id="@+id/btn_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/item_status"
+        android:layout_marginTop="22dp"
+        android:background="@null"
+        android:paddingTop="22dp"
+        android:textColor="@color/bio_dialog_cancel_btn"
+        tools:text="Cancel" />
+
+</RelativeLayout>
